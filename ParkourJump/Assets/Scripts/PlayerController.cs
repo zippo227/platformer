@@ -8,16 +8,33 @@ public class PlayerController : MonoBehaviour
 	private Animator anim;
 	private float speed = 1f;
 
+    Vector3 upwardForce;
 
 	void Awake ()
 	{
 		anim = GetComponent<Animator>();
+        upwardForce = new Vector3(0f, 5f);
 	}
+
+    void Update()
+    {
+        //Keyboard and xbox controller controls.
+        if (Input.GetButtonDown("Jump"))
+        {
+            gameObject.rigidbody.AddForce(upwardForce, ForceMode.Impulse);
+        }
+    }
 
 	void FixedUpdate ()
 	{
-		//Keyboard and xbox controller controls.
-		float h = Input.GetAxis("Horizontal");
+        //DON'T get button inputs in Fixed Updates
+        //You will lose some input if you do for
+        //very complicated reasons
+
+
+        float h = Input.GetAxis("Horizontal");
+		
+		
 		//float v = Input.GetAxis ("Vertical");
 
 		//float x = h * Time.deltaTime;// * speed;
