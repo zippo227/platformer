@@ -486,7 +486,7 @@ Transform:
   m_GameObject: {fileID: 139028794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .00341296918, y: .00341296918, z: .00341296918}
+  m_LocalScale: {x: .00431965431, y: .00431965431, z: .00431965431}
   m_Children:
   - {fileID: 678379734}
   m_Father: {fileID: 0}
@@ -2203,7 +2203,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6500008, guid: 9e46174b0d068064baa786d08e4737d6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9e46174b0d068064baa786d08e4737d6, type: 2}
   m_RootGameObject: {fileID: 1461233743}
   m_IsPrefabParent: 0
@@ -2286,7 +2287,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 932119129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 236.5, y: -201.5, z: 0}
+  m_LocalPosition: {x: 259.5, y: -178.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 678379734}
@@ -3451,8 +3452,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1461233747}
   - 33: {fileID: 1461233746}
-  - 65: {fileID: 1461233745}
   - 23: {fileID: 1461233744}
+  - 65: {fileID: 1461233745}
   m_Layer: 0
   m_Name: Building
   m_TagString: Untagged
@@ -3484,15 +3485,14 @@ Renderer:
 --- !u!65 &1461233745
 BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500008, guid: 9e46174b0d068064baa786d08e4737d6,
-    type: 2}
-  m_PrefabInternal: {fileID: 903419480}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1461233743}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: -1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1461233746
 MeshFilter:
@@ -4735,4 +4735,4 @@ CapsuleCollider:
   m_Radius: .219999999
   m_Height: 1.78999996
   m_Direction: 1
-  m_Center: {x: 0, y: .889999986, z: 0}
+  m_Center: {x: 0, y: .790000021, z: 0}

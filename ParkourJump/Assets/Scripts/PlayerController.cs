@@ -8,12 +8,12 @@ public class PlayerController : MonoBehaviour
 	private Animator anim;
 	private float speed = 1f;
 
-    Vector3 upwardForce;
+    float jumpForce;
 
 	void Awake ()
 	{
 		anim = GetComponent<Animator>();
-        upwardForce = new Vector3(0f, 5f);
+        jumpForce = 1f;
 	}
 
     void Update()
@@ -21,7 +21,11 @@ public class PlayerController : MonoBehaviour
         //Keyboard and xbox controller controls.
         if (Input.GetButtonDown("Jump"))
         {
-            gameObject.rigidbody.AddForce(upwardForce, ForceMode.Impulse);
+            anim.SetBool("Jump", true);
+        }
+        else if (Input.GetButtonUp("Jump"))
+        {
+            anim.SetBool("Jump", false);
         }
     }
 
@@ -31,7 +35,6 @@ public class PlayerController : MonoBehaviour
         //You will lose some input if you do for
         //very complicated reasons
 
-
         float h = Input.GetAxis("Horizontal");
 		
 		
@@ -40,12 +43,13 @@ public class PlayerController : MonoBehaviour
 		//float x = h * Time.deltaTime;// * speed;
 		//float y = v * Time.deltaTime * speed;
 
-		//transform.Translate(0, 0 , x);
+        ////transform.Translate(0, 0 , x);
 
 		if (h != 0f) {
 			Rotate (h);
 		}
-		anim.SetFloat("speed", Mathf.Abs(h));
+
+		anim.SetFloat("Speed", Mathf.Abs(h));
 	}
 
 	void Rotate (float horizontal)
