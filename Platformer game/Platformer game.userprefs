@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CameraFollow.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\consortya\trunk\Assets\Scripts\Character\General\CharacterControl.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="29" Column="15" />
-      <File FileName="Assets\Scripts\CameraFollow.cs" Line="13" Column="3" />
+      <File FileName="..\..\consortya\trunk\Assets\Scripts\Character\NPC\BartenderAI.cs" Line="56" Column="3" />
+      <File FileName="..\..\consortya\trunk\Assets\Scripts\Character\NPC\NPCControl.cs" Line="105" Column="14" />
+      <File FileName="..\..\consortya\trunk\Assets\Scripts\Character\General\CharacterControl.cs" Line="209" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -3,13 +3,17 @@ using System.Collections;
 
 public class CameraFollow : MonoBehaviour {
 	public Transform target;
+	public float lerpSpeed = 3f;
+	public float xScreenOffset = 2f;
 
-	void Start () {
-	
-	}
+	private Vector3 velocity = new Vector3 (.5f, .5f, .5f);
 
-	void Update () {
-		//transform.position = Vector3.Lerp (transform.position, target.position, Time.deltaTime);
+	void LateUpdate () {
+
+		float smoothX = Mathf.SmoothDamp (transform.position.x, target.position.x+xScreenOffset, ref velocity.x, .3f);
+		//float smoothY = Mathf.SmoothDamp (transform.position.y, target.position.y, ref velocity.y, .3f);
+
+		transform.position = Vector3.Lerp (transform.position, new Vector3(smoothX, transform.position.y, transform.position.z), Time.deltaTime * lerpSpeed);
 
 	}
 }
